@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use DICE in your research, please cite the software release and the accompanying paper when available."
+title: "DICE: Discovery and Image/Cube Evaluation"
+type: software
+authors:
+  - family-names: Hayatsu
+    given-names: Natsuki H.
+    orcid: "https://orcid.org/0000-0003-2112-1306"
+version: 0.1.0
+date-released: 2026-10-20
+repository-code: "https://github.com/natsuki-h2/DICE"
+url: "https://github.com/natsuki-h2/DICE"
+license: BSD-3-Clause
+keywords:
+  - astronomy
+  - interferometry
+  - source extraction
+  - completeness
+  - contamination

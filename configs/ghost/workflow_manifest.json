@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "recommended_track": "native_resolution_full_primary_beam",
+  "stages": [
+    {
+      "name": "prepare_and_inspect",
+      "scripts": [
+        "scripts/ghost/create_blank_fits.py",
+        "scripts/ghost/inspect_f1_output.py",
+        "scripts/ghost/reimage_f1.py"
+      ]
+    },
+    {
+      "name": "f1_design_and_validation",
+      "scripts": [
+        "scripts/ghost/run_f1_end_to_end.py",
+        "scripts/ghost/analyze_blank_snr.py",
+        "scripts/ghost/run_snr_pb_grid.py",
+        "scripts/ghost/design_spiral_positions.py",
+        "scripts/ghost/run_f1_independent_noise.py",
+        "scripts/ghost/plot_f1_independent_metrics.py"
+      ]
+    },
+    {
+      "name": "native_configuration_matrix",
+      "scripts": [
+        "scripts/ghost/image_native_full_pb_blank.py",
+        "scripts/ghost/run_native_full_pb_injection.py",
+        "scripts/ghost/plot_native_full_pb_metrics.py",
+        "scripts/ghost/summarize_matrix_baseline.py"
+      ]
+    },
+    {
+      "name": "robustness_diagnostics",
+      "scripts": [
+        "scripts/ghost/analyze_realization_convergence.py",
+        "scripts/ghost/analyze_detection_thresholds.py",
+        "scripts/ghost/audit_ms_weights_flags.py",
+        "scripts/ghost/run_controlled_sidelobe_pairs.py",
+        "scripts/ghost/plot_sidelobe_truth_breakdown.py",
+        "scripts/ghost/run_non_gaussian_pilot.py",
+        "scripts/ghost/run_extension_smoke_tests.py"
+      ]
+    }
+  ],
+  "deprecated_research_branch": {
+    "name": "common_resolution_tapered_matrix",
+    "legacy_examples": [31, 32, 33, 34, 35, 36, 37],
+    "reason": "Tapering removes the native angular-resolution advantage and is not the fiducial observational comparison.",
+    "public_default": false
+  }
+}

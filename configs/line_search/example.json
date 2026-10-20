@@ -1,0 +1,12 @@
+{
+  "image_fits": "data/my_project/calibrated/target.contsub.image.fits",
+  "pb_fits": "data/my_project/calibrated/target.pb.fits",
+  "output_directory": "data/my_project/catalogues",
+  "spw_label": 0,
+  "pb_min": 0.5,
+  "noise_mode": "global",
+  "threshold_snr": 5.5,
+  "width_channels": [3, 5, 7, 9, 12, 15, 21, 30, 45],
+  "merge_radius_pixels": 5.0,
+  "candidate_prefix": "DICE"
+}

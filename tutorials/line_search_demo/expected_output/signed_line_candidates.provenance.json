@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-08-17T07:41:54.113250+00:00",
+  "git_commit": "444665d4b3f79da7a95a73b7401abd5e9a0a7b7b",
+  "script": "scripts/line_search/search_fits_cube.py",
+  "command": [
+    "/opt/anaconda3/bin/python",
+    "scripts/line_search/search_fits_cube.py",
+    "tutorials/line_search_demo/demo_config.json"
+  ],
+  "config": "tutorials/line_search_demo/demo_config.json",
+  "inputs": [
+    {
+      "path": "tutorials/line_search_demo/demo.contsub.dirty.fits",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 1186560,
+      "modified_utc": "2026-08-17T07:17:04.396538+00:00"
+    },
+    {
+      "path": "tutorials/line_search_demo/demo.pb.fits",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 20160,
+      "modified_utc": "2026-08-17T07:17:04.398162+00:00"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "data/tutorials/line_search_demo/signed_line_candidates.csv",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 1094,
+      "modified_utc": "2026-08-17T07:41:54.112607+00:00",
+      "sha256": "9fedc1c573a0cf9ce9d173560fc4040f58fd182c3cfffea79691fc2eca79f2e5"
+    }
+  ],
+  "parameters": {
+    "image_fits": "tutorials/line_search_demo/demo.contsub.dirty.fits",
+    "pb_fits": "tutorials/line_search_demo/demo.pb.fits",
+    "output_directory": "data/tutorials/line_search_demo",
+    "spw_label": "demo",
+    "pb_min": 0.5,
+    "threshold_snr": 4.2,
+    "width_channels": [
+      3,
+      5,
+      7,
+      9,
+      12
+    ],
+    "merge_radius_pixels": 4.0,
+    "candidate_prefix": "DEMO"
+  },
+  "random_seeds": [],
+  "software": {
+    "python": "3.13.9",
+    "casa": null
+  }
+}

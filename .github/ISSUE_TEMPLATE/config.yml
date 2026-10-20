@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Student quick start (Japanese)
+    url: https://github.com/natsuki-h2/DICE/blob/main/docs/student_quick_start_ja.md
+    about: 初回導入、line search、出力確認の手順を先に確認してください。
+  - name: Student troubleshooting FAQ
+    url: https://github.com/natsuki-h2/DICE/issues/1
+    about: よくある質問と解決方法を確認してください。

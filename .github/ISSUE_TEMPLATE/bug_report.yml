@@ -1,0 +1,71 @@
+name: 再現可能な不具合の報告
+description: 同じ手順で繰り返し発生するエラーや予期しない動作を報告します。
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        日本語・英語のどちらでも報告できます。Bug reports are welcome in Japanese or English.
+        エラー全文を省略せず記載してください。原MS、未発表天体の座標、未公開候補表、認証情報は記載・添付しないでください。
+  - type: textarea
+    id: summary
+    attributes:
+      label: 不具合の概要
+      description: 何を実行し、何が起きたかを書いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 再現手順
+      description: repository rootから実行した手順を順番に書いてください。
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: 実行したコマンド
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: エラー全文または予期しない出力
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待した結果
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: 環境
+      description: OS、Python版、CASA版（使用した場合）を書いてください。
+      placeholder: macOS 15, Python 3.12, CASA 6.6
+    validations:
+      required: true
+  - type: textarea
+    id: configuration
+    attributes:
+      label: 設定とprovenance
+      description: 公開して問題のないconfig JSONとprovenance JSONの該当部分を貼ってください。
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 確認
+      options:
+        - label: 最新のmainで再現することを確認しました。
+          required: true
+        - label: FAQと既存Issuesに同じ問題がないことを確認しました。
+          required: true
+        - label: 原MS、未発表座標、未公開候補表、認証情報を含めていません。
+          required: true

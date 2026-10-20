@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-08-17T07:41:56.035085+00:00",
+  "git_commit": "444665d4b3f79da7a95a73b7401abd5e9a0a7b7b",
+  "script": "scripts/line_search/plot_candidates.py",
+  "command": [
+    "/opt/anaconda3/bin/python",
+    "scripts/line_search/plot_candidates.py",
+    "tutorials/line_search_demo/demo_config.json"
+  ],
+  "config": "tutorials/line_search_demo/demo_config.json",
+  "inputs": [
+    {
+      "path": "tutorials/line_search_demo/demo.contsub.dirty.fits",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 1186560,
+      "modified_utc": "2026-08-17T07:17:04.396538+00:00"
+    },
+    {
+      "path": "tutorials/line_search_demo/demo.pb.fits",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 20160,
+      "modified_utc": "2026-08-17T07:17:04.398162+00:00"
+    },
+    {
+      "path": "data/tutorials/line_search_demo/signed_line_candidates.csv",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 1094,
+      "modified_utc": "2026-08-17T07:41:54.112607+00:00"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "data/tutorials/line_search_demo/candidate_review.pdf",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 114002,
+      "modified_utc": "2026-08-17T07:41:55.409071+00:00",
+      "sha256": "13c0beed651e773dd9125abf598d92e00a330a891cbe7b6673b02ec96de0eae5"
+    },
+    {
+      "path": "data/tutorials/line_search_demo/candidate_sky_distribution.pdf",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 29122,
+      "modified_utc": "2026-08-17T07:41:55.513020+00:00",
+      "sha256": "826f0aaa2416e6e2c7c95508225e0d62310ff2b08bde196037966b3cf776d6b3"
+    },
+    {
+      "path": "data/tutorials/line_search_demo/candidate_sky_distribution.png",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 137180,
+      "modified_utc": "2026-08-17T07:41:55.645277+00:00",
+      "sha256": "f7e8cf252e4cd25689fdc9eac75b9864fe5d3eac098a9898a9efbc7e02f10e88"
+    },
+    {
+      "path": "data/tutorials/line_search_demo/line_search_diagnostics.pdf",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 24541,
+      "modified_utc": "2026-08-17T07:41:55.873005+00:00",
+      "sha256": "6ffcb5656abce0ad357589a594ecfe5abd868a5ae7a275f578fa64af66ccc67c"
+    },
+    {
+      "path": "data/tutorials/line_search_demo/line_search_diagnostics.png",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 206644,
+      "modified_utc": "2026-08-17T07:41:56.034603+00:00",
+      "sha256": "5af461e821e0d66176c5221a797a27b0850e43a90b785160e0421f8358a6feb8"
+    }
+  ],
+  "parameters": {
+    "radius_pixels": 18,
+    "max_candidates": null
+  },
+  "random_seeds": [],
+  "software": {
+    "python": "3.13.9",
+    "casa": null
+  }
+}

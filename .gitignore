@@ -1,0 +1,34 @@
+# Local data products
+data/
+*.ms/
+*.ms
+*.fits
+*.fits.gz
+!tutorials/line_search_demo/*.fits
+*.image/
+*.pb/
+*.psf/
+*.residual/
+*.model/
+*.mask/
+*.sumwt/
+
+# CASA logs and temporary files
+casalog.log
+casa-*.log
+TempLattice*/
+*.last
+*.log
+*.tmp
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+
+# Rebuilt document and scratch outputs
+paper/output/
+tmp/
+
+# macOS metadata
+.DS_Store

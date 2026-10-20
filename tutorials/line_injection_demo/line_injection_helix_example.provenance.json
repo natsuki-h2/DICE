@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-09-29T06:05:55.392329+00:00",
+  "git_commit": "33b5d6d3f19b0e6d636de76bbe9915b570a3cdca",
+  "script": "scripts/tutorials/plot_line_injection_helix.py",
+  "command": [
+    "python",
+    "scripts/tutorials/plot_line_injection_helix.py"
+  ],
+  "config": null,
+  "inputs": [],
+  "outputs": [
+    {
+      "path": "tutorials/line_injection_demo/line_injection_helix_example.png",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 225153,
+      "modified_utc": "2026-09-29T06:05:55.217888+00:00",
+      "sha256": "406aca27fbca94988cc3820fe63cc3e7fddf7c4b5b8bd4dd4dfde712ba2a1bfe"
+    },
+    {
+      "path": "tutorials/line_injection_demo/line_injection_helix_example.pdf",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 46619,
+      "modified_utc": "2026-09-29T06:05:55.391810+00:00",
+      "sha256": "0e61dbefecb074d1eb68f14ae51dc3f915d7410333639f6703851b2f30363f23"
+    },
+    {
+      "path": "tutorials/line_injection_demo/expected_helix_placements.csv",
+      "exists": true,
+      "kind": "file",
+      "size_bytes": 172,
+      "modified_utc": "2026-09-29T06:05:54.888942+00:00",
+      "sha256": "180a286ab122d806d4f5696a5f91401f56830a6944c1ceffe036ebcae88bdcd4"
+    }
+  ],
+  "parameters": {
+    "peak_snr": [
+      2.5,
+      3.5,
+      4.5,
+      5.5,
+      7.0
+    ],
+    "fwhm_channels": 10.0,
+    "cube_shape": [
+      240,
+      100,
+      100
+    ],
+    "min_spatial_separation_pixels": 8.0,
+    "spectral_extent_fwhm": 4.0,
+    "spatial_edge_margin_pixels": 8,
+    "seed": 7
+  },
+  "random_seeds": [
+    7
+  ],
+  "software": {
+    "python": "3.13.9",
+    "casa": null
+  }
+}

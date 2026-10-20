@@ -1,0 +1,34 @@
+{
+  "recovery": {
+    "input_flux_jy": 0.0001,
+    "recovered_flux_jy": 0.00009,
+    "input_position_arcsec": [0.0, 0.0],
+    "recovered_position_arcsec": [0.05, 0.08],
+    "max_offset_arcsec": 0.2,
+    "n_injected": 100,
+    "n_recovered": 82
+  },
+  "mock_setup": {
+    "configuration": "F4",
+    "output_type": "FITS image or MS",
+    "field_type": "blank/noisy",
+    "notes": "First ALMA2040/GHOST setup for continuum point-source recovery tests."
+  },
+  "visibility_injection": {
+    "vis": "data/tutorials/raw/blank_field.ms",
+    "direction": "J2000 03h32m39.53769 -27d46m43.5673",
+    "flux_jy": 0.0001,
+    "spw": "",
+    "complist": "data/tutorials/working/model.cl"
+  },
+  "visibility_line_injection": {
+    "vis": "data/tutorials/working/one_field_one_spw.ms",
+    "direction": "J2000 03h32m39.53769 -27d46m43.5673",
+    "center_frequency_hz": 230000000000.0,
+    "fwhm_kms": 300.0,
+    "peak_snr": 5.0,
+    "rms_jy_per_beam": 0.00002,
+    "frequency_frame": "TOPO",
+    "complist": "data/tutorials/working/line_model.cl"
+  }
+}

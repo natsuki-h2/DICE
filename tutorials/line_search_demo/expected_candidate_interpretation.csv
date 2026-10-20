@@ -1,0 +1,10 @@
+candidate_id,interpretation,matched_truth_id
+DEMO-E01,injected line,DEMO-T01
+DEMO-E02,injected line,DEMO-T03
+DEMO-E03,positive noise peak,
+DEMO-E04,injected line,DEMO-T02
+DEMO-E05,positive noise peak,
+DEMO-E06,positive noise peak,
+DEMO-A01,negative noise peak,
+DEMO-A02,negative noise peak,
+DEMO-A03,negative noise peak,

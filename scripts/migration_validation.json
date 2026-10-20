@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "workflows": [
+    {
+      "project": "tutorials",
+      "legacy_script": "examples/02_basic_recovery_metrics.py and examples/03_describe_mock_setup.py",
+      "new_script": "scripts/tutorials/basic_metrics.py",
+      "reference_product": "data/tutorials/products/basic_metrics.json",
+      "comparison": {
+        "flux_fidelity": 0.9,
+        "offset_arcsec": 0.09433981132056604,
+        "recovered": true,
+        "completeness": 0.82,
+        "mock_configuration": "F4"
+      },
+      "status": "PASS"
+    },
+    {
+      "project": "tutorials",
+      "legacy_script": "examples/01_visibility_injection_point_source.py",
+      "new_script": "scripts/tutorials/inject_point_source.py",
+      "reference_product": "dry-run request",
+      "comparison": {
+        "direction_identical": true,
+        "flux_jy_identical": true,
+        "spw_identical": true
+      },
+      "status": "PASS_DRY_RUN"
+    },
+    {
+      "project": "tutorials",
+      "legacy_script": "examples/04--09",
+      "new_script": "scripts/tutorials continuum, population, Monte Carlo, plotting, and flux-grid entry points",
+      "reference_product": "data/casa_* tutorial products",
+      "comparison": {
+        "continuum_reference_and_injected_arrays_byte_identical": true,
+        "single_pointing_arrays_byte_identical": true,
+        "single_pointing_shared_catalogue_fields_exact": true,
+        "single_pointing_added_fields": ["expected_snr", "recovered_peak_snr"],
+        "monte_carlo_aggregate_csvs_exact": true,
+        "flux_grid_csvs_byte_identical": true,
+        "metric_csvs_byte_identical": true
+      },
+      "status": "PASS"
+    },
+    {
+      "project": "ghost",
+      "legacy_script": "examples/41_plot_native_full_pb_metrics.py",
+      "new_script": "scripts/ghost/plot_native_full_pb_metrics.py",
+      "reference_product": "data/ghost_matrix/native_full_pb_runs/figures/native_full_pb_matrix_metrics.csv",
+      "comparison": {
+        "rows": 132,
+        "max_abs_numeric_difference": 0.0
+      },
+      "status": "PASS"
+    },
+    {
+      "project": "ghost",
+      "legacy_script": "examples/10--28 and native/diagnostic branches 38--49",
+      "new_script": "scripts/ghost public preparation, F1, native matrix, and diagnostic workflows",
+      "reference_product": "data/ghost_f1_5min and data/ghost_matrix",
+      "comparison": {
+        "python_files_compile": true,
+        "non_casa_workflows_rerun": true,
+        "independent_f1_metrics_csv_byte_identical": true,
+        "convergence_csv_byte_identical": true,
+        "threshold_csv_byte_identical": true,
+        "controlled_sidelobe_csvs_byte_identical": true,
+        "non_gaussian_summary_csv_byte_identical": true,
+        "extension_csv_and_summary_byte_identical": true,
+        "common_resolution_taper_branch_excluded_from_public_default": true
+      },
+      "status": "PASS"
+    },
+    {
+      "project": "ghost",
+      "legacy_script": "examples/30_summarize_ghost_matrix.py",
+      "new_script": "scripts/ghost/summarize_matrix_baseline.py",
+      "reference_product": "data/ghost_matrix/summary/ghost_matrix_baseline_summary.csv",
+      "comparison": {
+        "byte_identical_csv": true,
+        "rows": 10
+      },
+      "status": "PASS"
+    },
+    {
+      "project": "ghost",
+      "legacy_script": "examples/40_native_full_pb_injection_run.py",
+      "new_script": "scripts/ghost/run_native_full_pb_injection.py",
+      "reference_product": "data/ghost_matrix/native_full_pb_runs/f1",
+      "comparison": {
+        "configuration": "F1",
+        "realizations": 1,
+        "source_rows": 44,
+        "threshold_rows": 11,
+        "source_recovery_exact": true,
+        "threshold_counts_exact": true,
+        "realization_summary_exact": true
+      },
+      "status": "PASS"
+    },
+    {
+      "project": "population_forward",
+      "legacy_script": "examples/67, 68, 73, 74, 75, and 76",
+      "new_script": "scripts/population_forward analytic and plotting entry points",
+      "reference_product": "data/population_forward",
+      "comparison": {
+        "catalogue_csvs_byte_identical": true,
+        "p0_summary_byte_identical": true,
+        "p1_lf_csvs_byte_identical": true,
+        "p2_continuum_csv_byte_identical": true,
+        "p2_cii_csv_and_summary_byte_identical": true,
+        "wideband_ms_structure_reproduced": true,
+        "wideband_rms_values_exact": true,
+        "p0_visibility_summary_exact": true,
+        "p1_source_csv_byte_identical": true,
+        "p1_realization_csv_byte_identical": true,
+        "p1_summary_byte_identical": true,
+        "p2_cii_cube_scientific_summary_exact": true
+      },
+      "status": "PASS"
+    },
+    {
+      "project": "adf22",
+      "legacy_script": "examples/40--51 and 64--66",
+      "new_script": "scripts/adf22 archive inspection, continuum subtraction, dirty-cube search, recovery, and blank-realization workflows",
+      "reference_product": "data/hayatsu_reproduction",
+      "comparison": {
+        "python_files_compile": true,
+        "hayatsu2017_spw_candidate_csvs_byte_identical": true,
+        "hayatsu2017_recovery_csv_byte_identical": true,
+        "hayatsu2017_all_spw_csv_byte_identical": true,
+        "hayatsu2025_blank_summary_100_realizations_byte_identical": true
+      },
+      "status": "PASS"
+    },
+    {
+      "project": "line_search",
+      "legacy_script": "target-specific patterns in examples/54--62",
+      "new_script": "scripts/line_search/search_fits_cube.py and src/bliss_alma/linesearch.py",
+      "reference_product": "synthetic signed-cube unit test",
+      "comparison": {
+        "target_specific_metadata_excluded": true,
+        "positive_and_negative_search_symmetric": true,
+        "multi_width_candidate_merging_tested": true,
+        "provenance_sidecar_enabled": true
+      },
+      "status": "PASS_UNIT_TEST"
+    },
+    {
+      "project": "tester_release",
+      "legacy_script": "not applicable",
+      "new_script": "student quick start and public project entry points",
+      "reference_product": "clean public-export simulation on 2026-08-03",
+      "comparison": {
+        "editable_install_python_3_13": true,
+        "tests_passed": 20,
+        "basic_metrics_smoke_test": true,
+        "visibility_injection_dry_run": true,
+        "generic_line_search_cli_loads": true,
+        "local_data_excluded": true,
+        "all_migrated_savefig_scripts_call_provenance_writer": true
+      },
+      "status": "PASS"
+    }
+  ]
+}

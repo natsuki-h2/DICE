@@ -1,0 +1,52 @@
+name: 使用方法についての質問
+description: DICEの設定、入力、実行方法、出力について質問します。
+title: "[Question] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        日本語・英語のどちらでも質問できます。Questions are welcome in Japanese or English.
+        質問前にクイックスタートとFAQを確認してください。原MS、未発表天体の座標、未公開候補表、認証情報は記載・添付しないでください。
+  - type: textarea
+    id: question
+    attributes:
+      label: 質問
+      description: 何をしたいか、どこで迷ったかを具体的に書いてください。
+    validations:
+      required: true
+  - type: dropdown
+    id: workflow
+    attributes:
+      label: 該当する作業
+      options:
+        - Install・Git・Python環境
+        - Continuum・cube・PBの準備
+        - Line search
+        - Candidate plots
+        - Injection・completeness・contamination
+        - その他
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: 実行したコマンド
+      render: shell
+  - type: input
+    id: versions
+    attributes:
+      label: 環境
+      description: OS、Python版、CASA版（使用した場合）を書いてください。
+      placeholder: macOS 15, Python 3.12, CASA 6.6
+  - type: textarea
+    id: configuration
+    attributes:
+      label: 設定とprovenance
+      description: 公開して問題のないconfig JSONとprovenance JSONの該当部分を貼ってください。
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: データ保護
+      options:
+        - label: 原MS、未発表座標、未公開候補表、認証情報を含めていません。
+          required: true

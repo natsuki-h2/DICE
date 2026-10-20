@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "experiment": "DICE source-population forward-modelling facility comparison",
+  "cosmology": {
+    "model": "FlatLambdaCDM",
+    "H0_km_s_Mpc": 70.0,
+    "Omega_m": 0.3
+  },
+  "survey": {
+    "total_time_h": 100.0,
+    "area_arcmin2": 10.0,
+    "independent_fields": 10,
+    "time_per_field_h": 10.0,
+    "declination_deg": -27.8,
+    "weighting": "natural",
+    "uv_taper": false,
+    "pixels_per_minor_beam": 4,
+    "detection_threshold_sigma": 4.0
+  },
+  "continuum": {
+    "observed_frequency_ghz": 230.0,
+    "redshift_min": 4.5,
+    "redshift_max": 6.0,
+    "log10_lir_lsun_min": 8.0,
+    "log10_lir_lsun_max": 13.5,
+    "luminosity_function": "Gruppioni et al. 2020 ALPINE total-IR LF, z=4.5-6.0",
+    "lf_form": "Saunders",
+    "alpha": 1.28,
+    "log10_lstar_lsun": 12.16,
+    "log10_phistar_mpc3_dex": -3.73,
+    "sigma": 0.5,
+    "dust_temperature_k": 35.0,
+    "emissivity_beta": 1.8,
+    "include_cmb": true,
+    "robustness_temperature_k": [30.0, 45.0]
+  },
+  "line": {
+    "species": "[CII] 158 micron",
+    "rest_frequency_ghz": 1900.5369,
+    "frequency_min_ghz": 252.5,
+    "frequency_max_ghz": 267.5,
+    "redshift_min": 6.104810841121495,
+    "redshift_max": 6.526878811881188,
+    "log10_l_lsun_min": 6.0,
+    "log10_l_lsun_max": 10.5,
+    "luminosity_function": "Hayatsu et al. 2025 DPL shape with Hemmati local benchmark normalization",
+    "lf_form": "double_power_law",
+    "alpha_bright": 2.36,
+    "beta_faint": 0.42,
+    "log10_lstar_lsun": 8.336060483206557,
+    "log10_phistar_mpc3_dex": -2.5228787452803374,
+    "normalization_status": "benchmark_only_high_z_amplitude_is_not_fixed_by_hayatsu_2025",
+    "fwhm_kms_lognormal_median": 200.0,
+    "fwhm_kms_lognormal_sigma_dex": 0.25,
+    "channel_width_mhz": 15.625,
+    "channel_width_kms_at_260ghz": 18.016,
+    "comparison_modes": {
+      "common_volume": {
+        "frequency_min_ghz": 256.25,
+        "frequency_max_ghz": 263.75,
+        "purpose": "compare per-channel sensitivity and line recovery over the same 7.5-GHz volume"
+      },
+      "full_processed_bandwidth": {
+        "current_alma_ghz": [256.25, 263.75],
+        "alma2_initial_ghz": [252.5, 267.5],
+        "alma2_mature_ghz": [245.0, 275.0],
+        "purpose": "compare redshift volume and total recovered line counts"
+      }
+    }
+  },
+  "catalogues": {
+    "master_seed": 20400000,
+    "physical_realizations": 100,
+    "selection_catalogue_per_field": 500,
+    "selection_sampling": "stratified_in_logL_redshift_PB_with_LF_importance_weights"
+  },
+  "facility_cases": {
+    "current_alma": {
+      "antenna_configuration": "43-antenna C-7 equivalent",
+      "continuum_bandwidth_ghz": 7.5,
+      "frequency_blocks_ghz": [[226.25, 233.75]]
+    },
+    "alma2_initial_bandwidth_case": {
+      "antenna_configuration": "same_as_current_alma",
+      "continuum_bandwidth_ghz": 15.0,
+      "frequency_blocks_ghz": [[222.5, 230.0], [230.0, 237.5]],
+      "receiver_note": "bandwidth-only case; digital efficiency and receiver improvements applied separately"
+    },
+    "alma2_mature_bandwidth_case": {
+      "antenna_configuration": "same_as_current_alma",
+      "continuum_bandwidth_ghz": 30.0,
+      "frequency_blocks_ghz": [[215.0, 222.5], [222.5, 230.0], [230.0, 237.5], [237.5, 245.0]],
+      "receiver_note": "bandwidth-only case; mature WSU receiver assumptions applied separately"
+    }
+  }
+}

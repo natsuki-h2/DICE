@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "project": "ADF22 Hayatsu reproduction",
+  "data_distribution": "Measurement sets are not distributed; obtain them from the ALMA archive/helpdesk.",
+  "stages": [
+    {"name": "inspect", "script": "scripts/adf22/inspect_measurement_sets.py"},
+    {"name": "continuum_subtraction", "script": "scripts/adf22/run_uvcontsub.py", "requires": "CASA"},
+    {"name": "dirty_cube_imaging", "script": "scripts/adf22/image_contsub_cubes.py", "requires": "CASA"},
+    {"name": "blind_search", "script": "scripts/adf22/search_contsub_cubes.py", "arguments": ["SPW=0..3"]},
+    {"name": "hayatsu2017_recovery", "scripts": ["scripts/adf22/plot_exact_recovery.py", "scripts/adf22/summarize_all_spw.py"]},
+    {"name": "hayatsu2025_injection", "script": "scripts/adf22/reproduce_hayatsu2025.py"},
+    {"name": "hayatsu2025_blank_validation", "scripts": ["scripts/adf22/generate_hayatsu2025_blank_realizations.py", "scripts/adf22/analyze_hayatsu2025_blank_realizations.py"], "uncertainty_unit": "whole visibility-noise realization"}
+  ],
+  "validated_checks": {
+    "hayatsu2017_exact_recovery_csvs_byte_identical": true,
+    "hayatsu2017_all_spw_csv_byte_identical": true,
+    "hayatsu2025_blank_summary_100_realizations_byte_identical": true
+  }
+}

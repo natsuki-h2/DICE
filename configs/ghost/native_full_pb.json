@@ -1,0 +1,13 @@
+{
+  "input_directory": "data/ghost_matrix/native_full_pb_runs",
+  "figure_directory": "data/ghost_matrix/native_full_pb_runs/figures",
+  "configurations": ["F1", "F2", "F3", "F4", "F5", "F6"],
+  "snr_min": 2.0,
+  "snr_max": 7.0,
+  "snr_step": 0.5,
+  "n_resamples": 10000,
+  "resample_seed": 2040,
+  "detection_threshold_snr": 4.0,
+  "pixels_per_minor_beam": 4,
+  "uv_taper": "none"
+}

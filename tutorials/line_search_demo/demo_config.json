@@ -1,0 +1,11 @@
+{
+  "image_fits": "tutorials/line_search_demo/demo.contsub.dirty.fits",
+  "pb_fits": "tutorials/line_search_demo/demo.pb.fits",
+  "output_directory": "data/tutorials/line_search_demo",
+  "spw_label": "demo",
+  "pb_min": 0.5,
+  "threshold_snr": 4.2,
+  "width_channels": [3, 5, 7, 9, 12],
+  "merge_radius_pixels": 4.0,
+  "candidate_prefix": "DEMO"
+}
