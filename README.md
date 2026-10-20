@@ -1,6 +1,7 @@
 # DICE
 
 [![Tests](https://github.com/natsuki-h2/DICE/actions/workflows/tests.yml/badge.svg)](https://github.com/natsuki-h2/DICE/actions/workflows/tests.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23487915.svg)](https://doi.org/10.5281/zenodo.23487915)
 
 **DICE** stands for **Discovery and Image/Cube Evaluation**.
 
@@ -84,6 +85,11 @@ point-source injection, image- and cube-domain injection, configurable source
 extraction, and completeness/contamination measurements. The package remains
 under active development; workflows and configuration fields may change before
 the first stable release.
+
+For reproducible citation of this exact release, use
+[DICE v0.1.0 on Zenodo](https://doi.org/10.5281/zenodo.23487916). The DOI badge
+at the top of this page resolves to the archive containing all released
+versions.
 
 The first implemented module is `src/bliss_alma/injection.py`, which provides a minimal CASA-based visibility-domain point-source injection workflow.
 
@@ -170,13 +176,14 @@ of primary-beam response.
 
 The original implementation and its application are described in:
 
-Hayatsu et al. 2025, arXiv:2510.02303
+Hayatsu et al. (2025), *Publications of the Astronomical Society of Japan*,
+77, 1163--1180, [doi:10.1093/pasj/psae094](https://doi.org/10.1093/pasj/psae094).
 
 ## Citation and license
 
-Citation metadata are provided in [`CITATION.cff`](CITATION.cff). A versioned
-Zenodo DOI and the accompanying DICE paper citation will be added to the first
-archived release metadata.
+Citation metadata are provided in [`CITATION.cff`](CITATION.cff). Cite the
+versioned Zenodo record for the software release used in an analysis; the DICE
+paper citation will be added after publication.
 
 DICE is distributed under the [BSD 3-Clause License](LICENSE). Contributions
 and bug reports are welcome; see [`CONTRIBUTING.md`](CONTRIBUTING.md) and
